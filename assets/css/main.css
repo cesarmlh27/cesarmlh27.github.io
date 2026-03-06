@@ -5343,6 +5343,8 @@ html {
   background: linear-gradient(90deg, #7d93db, #b3c1ff);
 }
 
+
+
 /* ======================================================
    HOVER PRO EN PROYECTOS
 ====================================================== */
@@ -5436,9 +5438,11 @@ html {
 
   #banner {
     background: linear-gradient(rgba(8, 12, 24, 0.65), rgba(8, 12, 24, 0.75)),
-      url("images/hero-poster.jpg") center center / cover no-repeat !important;
+      url("../../images/hero-poster.webp") center center / cover no-repeat !important;
   }
 }
+
+
 
 
 /* ===== FIX FINAL HERO VIDEO ===== */
@@ -5531,5 +5535,23 @@ html {
   #banner .banner-photo {
     width: 200px !important;
     height: 200px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #banner {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    background-color: #0b1020 !important;
+    background-image:
+      linear-gradient(rgba(8, 12, 24, 0.65), rgba(8, 12, 24, 0.75)),
+      url("../../images/hero-poster.webp") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+  .video-bg {
+    display: none !important;
   }
 }
