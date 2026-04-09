@@ -1,31 +1,35 @@
-Solid State by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Portafolio - Cesar Miguel Lopez Hernandez
 
+Portafolio personal de Cesar Miguel Lopez Hernandez, Ingeniero de Sistemas.
 
-After a somewhat extended break from HTML5 UP (to work on a secret-ish new project --
-more on that later!) I'm back with a brand new design: Solid State, a slick new multi-
-pager that combines some of the ideas I've played with over at Pixelarity with an "angular"
-sort of look. Hope you dig it :)
+## Descripción
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Este es un portafolio web que muestra proyectos en:
+- **APIs REST**: Spring Boot, FastAPI, Node.js
+- **Análisis de Datos**: Python, Pandas, Machine Learning
+- **Backend**: Diseño de sistemas escalables
+- **Bases de Datos**: PostgreSQL, MongoDB
 
-(* = not included)
+## Contenido
 
-AJ
-aj@lkn.io | @ajlkn
+- **Sobre mí**: Información académica y profesional
+- **Proyectos**: Selección de trabajos destacados (FireRisk, Evenfy)
+- **Contacto**: Información de contacto y redes sociales
 
+## Tecnologías Utilizadas
 
-Credits:
+Frontend:
+- HTML5, CSS3
+- JavaScript
+- Responsive Design
 
-	Demo Images:
-		Unsplash (unsplash.com)
+Backend:
+- Spring Boot, FastAPI, Node.js
+- PostgreSQL, MongoDB
+- Docker
 
-	Icons:
-		Font Awesome (fontawesome.io)
+## Créditos
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Diseño basado en Solid State de HTML5 UP
+- Font Awesome para iconos
+- jQuery para interactividad
