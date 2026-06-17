@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const isCompactViewport = window.matchMedia("(max-width: 980px)").matches;
+
+  window.setTimeout(() => {
+    document.body.classList.remove("is-preload");
+  }, 100);
+
   /* =========================================
      TABS DE LAS CARDS DE PROYECTOS
   ========================================= */
@@ -57,9 +63,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  revealElements.forEach((el) => {
-    revealObserver.observe(el);
-  });
+  if (isCompactViewport) {
+    revealElements.forEach((el) => el.classList.add("is-visible"));
+  } else if ("IntersectionObserver" in window) {
+    revealElements.forEach((el) => {
+      revealObserver.observe(el);
+    });
+  } else {
+    revealElements.forEach((el) => el.classList.add("is-visible"));
+  }
 
   /* =========================================
      HEADER DINAMICO
@@ -77,7 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   updateHeaderState();
-  window.addEventListener("scroll", updateHeaderState);
+  if (!isCompactViewport) {
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+  }
 
   /* =========================================
      NAV ACTIVO SEGUN SECCION
@@ -120,5 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   updateActiveNav();
-  window.addEventListener("scroll", updateActiveNav);
+  if (!isCompactViewport) {
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+  }
 });

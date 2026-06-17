@@ -4,11 +4,14 @@
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
 -->
-<html>
+<html lang="es">
 <head>
 	<title>Portafolio | Cesar Lopez</title>
+	<meta charset="utf-8" />
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="icon" href="images/hero-poster.webp" type="image/webp" />
+	<link rel="preload" href="images/hero-poster.webp" as="image" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -30,8 +33,8 @@
 
 		<!-- Banner -->
 		<section id="banner">
-				<video autoplay muted loop playsinline preload="none" poster="images/hero-poster.webp" class="video-bg">
-				<source src="assets/video/hero.mp4" type="video/mp4">
+				<video autoplay muted loop playsinline preload="none" poster="images/hero-poster.webp" class="video-bg" aria-hidden="true">
+				<source src="assets/video/hero.mp4" type="video/mp4" media="(min-width: 981px)">
 			</video>
 
 			<div class="overlay"></div>
@@ -168,8 +171,8 @@
 						<!-- CARD 1 -->
 						<div class="project-tab-card reveal-left delay-1" data-state="#project-1">
 							<div class="project-card-header">
-								<div class="project-card-cover" style="background-image: url('images/firerisk.jpg');"></div>
-								<img class="project-card-avatar" src="images/firerisk.webp" alt="FireRisk">
+								<div class="project-card-cover project-card-cover-firerisk"></div>
+								<img class="project-card-avatar" src="images/hero-poster.webp" alt="FireRisk" loading="lazy" decoding="async" width="320" height="320">
 								<h3 class="project-card-fullname">FireRisk</h3>
 								<h4 class="project-card-jobtitle">Sistema predictivo</h4>
 							</div>
@@ -224,7 +227,7 @@
 									<div class="project-card-content">
 										<div class="project-card-subtitle">VER PROYECTO</div>
 										<div class="project-card-actions">
-											<a href="https://github.com/cesarmlh27/FireRisk" target="_blank" rel="noopener noreferrer" class="button small primary icon brands fa-github">GitHub</a>
+											<a href="https://github.com/cesarmlh27/FireRisk" target="_blank" rel="noopener noreferrer" class="button small primary">GitHub</a>
 										</div>
 									</div>
 								</div>
@@ -240,8 +243,8 @@
 						<!-- CARD 2 -->
 						<div class="project-tab-card reveal-left delay-1" data-state="#project-2">
 							<div class="project-card-header">
-								<div class="project-card-cover" style="background-image: url('images/evenfy.webp');"></div>
-								<img class="project-card-avatar" src="images/tunja-fondo.webp" alt="Evenfy">
+								<div class="project-card-cover project-card-cover-evenfy"></div>
+								<img class="project-card-avatar" src="images/hero-poster.webp" alt="Evenfy" loading="lazy" decoding="async" width="320" height="320">
 								<h3 class="project-card-fullname">Evenfy</h3>
 								<h4 class="project-card-jobtitle">API de eventos</h4>
 							</div>
@@ -296,7 +299,7 @@
 									<div class="project-card-content">
 										<div class="project-card-subtitle">VER PROYECTO</div>
 										<div class="project-card-actions">
-											<a href="https://github.com/cesarmlh27/Evenfy-Tunja" target="_blank" rel="noopener noreferrer" class="button small primary icon brands fa-github">GitHub</a>
+											<a href="https://github.com/cesarmlh27/Evenfy-Tunja" target="_blank" rel="noopener noreferrer" class="button small primary">GitHub</a>
 										</div>
 									</div>
 								</div>
@@ -320,16 +323,16 @@
 					
 
 					<ul class="contact">
-						<li class="icon solid fa-user">Cesar Miguel Lopez Hernandez</li>
-						<li class="icon solid fa-briefcase">Ingeniero de Sistemas</li>
-						<li class="icon solid fa-envelope">
+						<li class="contact-item" data-icon="ID">Cesar Miguel Lopez Hernandez</li>
+						<li class="contact-item" data-icon="ROL">Ingeniero de Sistemas</li>
+						<li class="contact-item" data-icon="MAIL">
 							<a href="mailto:tucorreo@correo.com">cesarmlh27@gmail.com</a>
 						</li>
-						<li class="icon solid fa-phone">
+						<li class="contact-item" data-icon="TEL">
 							<a href="tel:+573000000000">+57 322 8932595</a>
 						</li>
-						<li class="icon solid fa-map-marker-alt">Bogotá DC, Colombia</li>
-						<li class="icon brands fa-github">
+						<li class="contact-item" data-icon="LOC">Bogotá DC, Colombia</li>
+						<li class="contact-item" data-icon="GH">
 							<a href="https://github.com/cesarmlh27" target="_blank" rel="noopener noreferrer">GitHub</a>
 						</li>
 					</ul>
@@ -345,13 +348,7 @@
 	</div>
 
 	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/custom.js"></script>
+	<script src="assets/js/custom.js" defer></script>
 
 </body>
 </html>

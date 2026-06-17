@@ -1,6 +1,3 @@
-@import url(fontawesome-all.min.css);
-@import url("https://fonts.googleapis.com/css?family=Raleway:200,700|Source+Sans+Pro:300,600,300italic,600italic");
-
 /*
 	Solid State by HTML5 UP
 	html5up.net | @ajlkn
@@ -100,11 +97,11 @@ input, select, textarea {
 
 	body {
 		background-color: #2e3141;
-		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+		background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/hero-poster.webp");
 		background-size: auto,
  cover;
-		background-attachment: fixed,
- fixed;
+		background-attachment: scroll,
+ scroll;
 		background-position: center,
  center;
 	}
@@ -3364,7 +3361,7 @@ input, select, textarea {
   #banner {
     background:
       linear-gradient(rgba(8, 12, 24, 0.65), rgba(8, 12, 24, 0.75)),
-      url("../../images/hero-poster.jpg") center center / cover no-repeat !important;
+			url("../../images/hero-poster.webp") center center / cover no-repeat !important;
   }
 }
 
@@ -3909,7 +3906,7 @@ input, select, textarea {
 
 		#footer {
 			background-color: #2e3141;
-			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/bg.jpg");
+			background-image: linear-gradient(to top, rgba(46, 49, 65, 0.8), rgba(46, 49, 65, 0.8)), url("../../images/hero-poster.webp");
 			background-size: auto,
  cover;
 			background-position: center,
@@ -4424,7 +4421,7 @@ input, select, textarea {
 
 #projects {
   position: relative;
-  background: url("../../images/hero-bg.webp") center center / cover no-repeat;
+	background: url("../../images/hero-poster.webp") center center / cover no-repeat;
   overflow: hidden;
 }
 
@@ -4627,8 +4624,16 @@ input, select, textarea {
   left: 0;
   background-size: cover;
   background-position: center;
-  filter: blur(26px);
+	filter: blur(10px);
   transform: scale(1.2);
+}
+
+.project-card-cover-firerisk {
+	background-image: url("../../images/hero-poster.webp");
+}
+
+.project-card-cover-evenfy {
+	background-image: url("../../images/hero-poster.webp");
 }
 
 .project-card-avatar {
@@ -4909,7 +4914,7 @@ input, select, textarea {
   position: relative;
   margin: 0 !important;
   overflow: hidden;
-  background: url("../../images/hero-bg.webp") center center / cover no-repeat !important;
+	background: url("../../images/hero-poster.webp") center center / cover no-repeat !important;
 }
 
 /* quitar triangulos del template */
@@ -5055,19 +5060,21 @@ input, select, textarea {
   will-change: transform;
 }
 
-.project-tab-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.34);
-}
+@media (hover: hover) and (pointer: fine) {
+	.project-tab-card:hover {
+		transform: translateY(-6px) scale(1.03);
+		box-shadow: 0 28px 55px rgba(0, 0, 0, 0.34);
+	}
 
-/* para que el header y la portada acompañen el efecto */
-.project-tab-card:hover .project-card-cover {
-  transform: scale(1.22);
-  filter: blur(22px);
-}
+	/* para que el header y la portada acompanen el efecto */
+	.project-tab-card:hover .project-card-cover {
+		transform: scale(1.22);
+		filter: blur(16px);
+	}
 
-.project-tab-card:hover .project-card-avatar {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+	.project-tab-card:hover .project-card-avatar {
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+	}
 }
 
 
@@ -5157,6 +5164,7 @@ input, select, textarea {
 }
 
 #contact .contact li::before {
+  content: attr(data-icon);
   position: absolute;
 	left: 1rem;
 	top: 50%;
@@ -5168,9 +5176,12 @@ input, select, textarea {
 	background: rgba(76, 92, 150, 0.16);
 	display: grid;
 	place-items: center;
+	font-family: inherit;
+	font-weight: 700;
+	letter-spacing: 0.02em;
   line-height: 1;
   color: #c8d2ff;
-  font-size: 0.9rem;
+	font-size: 0.62rem;
 }
 
 #contact .contact li a {
@@ -5315,8 +5326,7 @@ html {
 }
 
 #header.scrolled {
-  background: rgba(14, 20, 34, 0.78);
-  backdrop-filter: blur(10px);
+	background: rgba(14, 20, 34, 0.92);
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.22);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -5358,18 +5368,39 @@ html {
   will-change: transform;
 }
 
-.project-tab-card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 28px 55px rgba(0, 0, 0, 0.34);
+@media (hover: hover) and (pointer: fine) {
+	.project-tab-card:hover {
+		transform: translateY(-6px) scale(1.03);
+		box-shadow: 0 28px 55px rgba(0, 0, 0, 0.34);
+	}
+
+	.project-tab-card:hover .project-card-cover {
+		transform: scale(1.22);
+		filter: blur(16px);
+	}
+
+	.project-tab-card:hover .project-card-avatar {
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+	}
 }
 
-.project-tab-card:hover .project-card-cover {
-  transform: scale(1.22);
-  filter: blur(22px);
+@media screen and (max-width: 980px) {
+	.project-card-cover {
+		filter: none;
+		transform: scale(1.05);
+	}
+
+	.project-tab-card,
+	.project-card-header * {
+		transition: none !important;
+	}
 }
 
-.project-tab-card:hover .project-card-avatar {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
+#about,
+#projects,
+#contact {
+	content-visibility: auto;
+	contain-intrinsic-size: 900px;
 }
 
 /* ======================================================
